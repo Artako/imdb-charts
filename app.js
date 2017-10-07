@@ -27,7 +27,7 @@ process.on('uncaughtException', function(err) {
   console.log("=======Error======" + err.stack);
 });
 
-console.log('Hello ');
+console.log('Hello World');
 
 const filmController = require('./api/filmController');
 app.get('/api/suggest-movie', filmController.suggestMovie);
