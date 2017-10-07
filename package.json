@@ -1,0 +1,30 @@
+{
+  "name": "imdb-charts",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://ArshakTovmasyan@bitbucket.org/ArshakTovmasyan/imdb-charts.git",
+  "author": "Arshak Tovmasyan <arshtov@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "connect-multiparty": "^2.0.0",
+    "consolidate": "^0.14.5",
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.0",
+    "imdb-api": "^3.1.1",
+    "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
