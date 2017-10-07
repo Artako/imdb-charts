@@ -16,18 +16,19 @@ app.use(bodyParser.urlencoded({
 app.use(multiparty());
 
 app.use(function (req, res, next) {
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-      res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-      res.setHeader('Access-Control-Allow-Credentials', true);
-      next();
-  });
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
 
 process.on('uncaughtException', function(err) {
   console.log("=======Error======" + err.stack);
 });
 
-console.log('Hello World');
+
+app.use(express.static('views'));
 
 const filmController = require('./api/filmController');
 app.get('/api/suggest-movie', filmController.suggestMovie);
